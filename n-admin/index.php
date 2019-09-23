@@ -9,7 +9,7 @@ if(!isset($_GET["no"])){
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login N-CMS</title>
+    <title>N-CMS</title>
     <?php includestyles(); ?>
   </head>
   <body>
