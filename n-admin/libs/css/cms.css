@@ -86,6 +86,9 @@ a, a:hover, a:focus {
     color: #fff;
     background: #333;
 }
+#sidebar ul ul li.active > a{
+  background: #222;
+}
 
 #sidebar a.logout {
     color: #fff;
