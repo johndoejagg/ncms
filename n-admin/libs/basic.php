@@ -7,6 +7,6 @@ function includestyles(){
 }
 
 function includescripts(){
-  echo '<script src="'.BASE.'n-admin/libs/jquery.js"></script><script src="'.BASE.'n-admin/libs/popper.js"></script><script src="'.BASE.'n-admin/libs/bootstrap/js/bootstrap.min.js" ></script>';
+  echo '<script src="'.BASE.'n-admin/libs/js/jquery.js"></script><script src="'.BASE.'n-admin/libs/js/popper.js"></script><script src="'.BASE.'n-admin/libs/bootstrap/js/bootstrap.min.js" ></script>';
 }
 ?>
