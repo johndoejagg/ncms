@@ -3,7 +3,7 @@ define("BASE",substr(dirname(__FILE__,3),strlen($_SERVER["DOCUMENT_ROOT"]))."/")
 define("URL",substr($_SERVER['REQUEST_URI'],strlen(BASE)));
 
 function includestyles(){
-  echo '<link rel="stylesheet" href="'.BASE.'n-admin/libs/fontawsome/css/all.css"><link rel="stylesheet" href="'.BASE.'n-admin/libs/bootstrap/css/bootstrap.min.css">';
+  echo '<link rel="stylesheet" href="'.BASE.'n-admin/libs/fontawsome/css/all.css"><link rel="stylesheet" href="'.BASE.'n-admin/libs/css/cms.css"><link rel="stylesheet" href="'.BASE.'n-admin/libs/bootstrap/css/bootstrap.min.css">';
 }
 
 function includescripts(){

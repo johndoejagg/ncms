@@ -52,7 +52,7 @@ if(isset($_GET["check"])){
   </style>
   </head>
   <body>
-    <div class="container bg-dark text-white mt-3 p-3" style="max-width:350px">
+    <div class="container bg-dark text-white p-3" style="max-width:350px; margin-top:100px">
       <h1>Login</h1>
       <form action="?check=1" method="post">
         <div class="input-container">
