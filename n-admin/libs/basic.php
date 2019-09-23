@@ -1,5 +1,5 @@
 <?php
-define("BASE",substr(dirname(__FILE__,2),strlen($_SERVER["DOCUMENT_ROOT"]))."/");
+define("BASE",substr(dirname(__FILE__,3),strlen($_SERVER["DOCUMENT_ROOT"]))."/");
 define("URL",substr($_SERVER['REQUEST_URI'],strlen(BASE)));
 
 function includestyles(){
