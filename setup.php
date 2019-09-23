@@ -1,5 +1,5 @@
 <?php
-  include "libs/basic.php";
+  include "n-admin/libs/basic.php";
   $step=1;
   if(file_exists("n-config.php")){
     include("n-config.php");
@@ -51,7 +51,7 @@
     if(mysqli_query($con,"INSERT INTO `user` (`ID`, `name`, `password`, `email`) VALUES (NULL, '".$user->name."', MD5('".$user->password."'), '".$user->email."');")){
       echo die("Install complete :D setup is now locked. please <a href='".BASE."n-admin/'>login</a>");
     }else{
-      echo "Could not create/find Database, please do it your own";
+      echo "Could not create user, check database privileges";
     }
     die();
   }
@@ -179,8 +179,7 @@
 
         if($("#password").val()!=""){
           var user={name:$("#username").val(), password:$("#password").val(), email:$("#email").val()};
-          var db={host:$("#db_host").val(), name:$("#db_name").val(), user:$("#db_user").val(), password:$("#db_password").val()};
-          $.ajax({method:"post", url:"?user=1", data:{user:JSON.stringify(user),db:JSON.stringify(db)}}).done(function(e){
+          $.ajax({method:"post", url:"?user=1", data:{user:JSON.stringify(user)}}).done(function(e){
               $(".step.2").append("<div class='msg'>"+e+"</div>");
           });
         }else{

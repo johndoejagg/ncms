@@ -1,0 +1,1 @@
+<?php define('DB',array('localhost','root','','ncms')); ?>
