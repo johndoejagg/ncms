@@ -15,8 +15,8 @@ if(!isset($_GET["no"])){
   <body>
     <div class="wrapper">
           <!-- Sidebar Holder -->
-          <nav id="sidebar">
-              <div class="sidebar-header">
+          <nav id="sidebar" class="bg-dark">
+              <div class="sidebar-header bg-primary">
                   <h3>N-CMS</h3>
               </div>
 
@@ -57,6 +57,7 @@ if(!isset($_GET["no"])){
                       <a href="#">Contact</a>
                   </li>
               </ul>
+              <a class="logout" href="logout.php"><i class="fas fa-sign-out-alt"></i> logout</a>
           </nav>
 
           <!-- Page Content Holder -->
