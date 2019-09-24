@@ -31,7 +31,7 @@ if(!isset($_GET["no"])){
               <ul class="list-unstyled components">
                   <?php buildMenu() ?>
               </ul>
-              <a class="logout" href="logout.php"><i class="fas fa-sign-out-alt"></i> logout</a>
+              <a class="logout" href="logout.php"><i class="fas fa-sign-out-alt"></i> <?php echo LANG["logout"]; ?></a>
           </nav>
 
           <!-- Page Content Holder -->
@@ -41,7 +41,7 @@ if(!isset($_GET["no"])){
                 <span></span><span></span><span></span>
               </button>
             </nav>
-            <?php echo MODULNAME; getModul(); ?>
+            <?php getModul(); ?>
           </div>
         </div>
   </body>

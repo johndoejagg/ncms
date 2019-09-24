@@ -1,27 +1,25 @@
 <?php
   function buildMenu(){
 
-    $lang=$GLOBALS["lang"];
-
-    for($i=0; $i<count($lang->menu); $i++){
+    for($i=0; $i<count(LANG["menu"]); $i++){
 
       $active="";
-      if(MODUL==$lang->menu[$i][1]){
+      if(MODUL==LANG["menu"][$i][1]){
         $active="active";
-        define("MODULNAME",$lang->menu[$i][0]);
+        define("MODULNAME",LANG["menu"][$i][0]);
       }
       $collapse="collapse ";
 
-      if(isset($lang->menu[$i][2])){
+      if(isset(LANG["menu"][$i][2])){
 
-        $sub=$lang->menu[$i][2];
+        $sub=LANG["menu"][$i][2];
         $ul="";
 
         for($j=0; $j<count($sub); $j++){
 
           $subactive="";
 
-          if(MODUL==$lang->menu[$i][1]."/".$sub[$j][1]){
+          if(MODUL==LANG["menu"][$i][1]."/".$sub[$j][1]){
 
             $subactive="active";
             $active="active";
@@ -30,16 +28,16 @@
 
           }
 
-          $ul.="<li class='".$subactive."'><a href='?m=".$lang->menu[$i][1]."/".$sub[$j][1]."'>".$sub[$j][0]."</a></li>";
+          $ul.="<li class='".$subactive."'><a href='?m=".LANG["menu"][$i][1]."/".$sub[$j][1]."'>".$sub[$j][0]."</a></li>";
 
         }
 
-        $ul=$ul='<ul class="'.$collapse.'list-unstyled'.($collapse=="" ? " show":"").'" id="'.$lang->menu[$i][1].'">'.$ul."</ul>";
-        echo "<li class='".$active."'  ><a href='#".$lang->menu[$i][1]."' data-toggle='collapse' aria-expanded='".($collapse=="" ? "true":"false")."' class='dropdown-toggle'>".$lang->menu[$i][0]."</a>".$ul."</li>";
+        $ul=$ul='<ul class="'.$collapse.'list-unstyled'.($collapse=="" ? " show":"").'" id="'.LANG["menu"][$i][1].'">'.$ul."</ul>";
+        echo "<li class='".$active."'  ><a href='#".LANG["menu"][$i][1]."' data-toggle='collapse' aria-expanded='".($collapse=="" ? "true":"false")."' class='dropdown-toggle'>".LANG["menu"][$i][0]."</a>".$ul."</li>";
 
       }else{
 
-        echo "<li class='".$active."'><a href='?m=".$lang->menu[$i][1]."'>".$lang->menu[$i][0]."</a></li>";
+        echo "<li class='".$active."'><a href='?m=".LANG["menu"][$i][1]."'>".LANG["menu"][$i][0]."</a></li>";
 
       }
 
