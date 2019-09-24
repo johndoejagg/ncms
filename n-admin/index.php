@@ -41,7 +41,7 @@ if(!isset($_GET["no"])){
                 <span></span><span></span><span></span>
               </button>
             </nav>
-            <?php getModul(); ?>
+            <?php echo MODULNAME; getModul(); ?>
           </div>
         </div>
   </body>

@@ -83,8 +83,11 @@ a, a:hover, a:focus {
 
 #sidebar ul li.active > a, a[aria-expanded="true"] {
     color: #fff;
-    background: #333;
+    background: #39D;
+    border-bottom:1px solid #666;
 }
+#sidebar ul li.active > a:before {content: "►";display: inline-block;margin: 0 5px 0 0;}
+
 #sidebar ul ul li.active > a{
   background: #222;
 }

@@ -6,7 +6,10 @@
     for($i=0; $i<count($lang->menu); $i++){
 
       $active="";
-      if(isset($_GET["m"]) && $_GET["m"]==$lang->menu[$i][1])$active="active";
+      if(MODUL==$lang->menu[$i][1]){
+        $active="active";
+        define("MODULNAME",$lang->menu[$i][0]);
+      }
       $collapse="collapse ";
 
       if(isset($lang->menu[$i][2])){
@@ -18,10 +21,11 @@
 
           $subactive="";
 
-          if(isset($_GET["m"]) && $_GET["m"]==$lang->menu[$i][1]."/".$sub[$j][1]){
+          if(MODUL==$lang->menu[$i][1]."/".$sub[$j][1]){
 
             $subactive="active";
             $active="active";
+            define("MODULNAME",$sub[$j][0]);
             $collapse="";
 
           }
@@ -40,6 +44,6 @@
       }
 
     }
-    
+
   }
 ?>
