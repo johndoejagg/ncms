@@ -34,8 +34,12 @@
         echo "<li class='".$active."'  ><a href='#".$lang->menu[$i][1]."' data-toggle='collapse' aria-expanded='".($collapse=="" ? "true":"false")."' class='dropdown-toggle'>".$lang->menu[$i][0]."</a>".$ul."</li>";
 
       }else{
+
         echo "<li class='".$active."'><a href='?m=".$lang->menu[$i][1]."'>".$lang->menu[$i][0]."</a></li>";
+
       }
+
     }
+    
   }
 ?>

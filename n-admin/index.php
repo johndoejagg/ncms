@@ -10,6 +10,15 @@ if(!isset($_GET["no"])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>N-CMS</title>
     <?php includestyles(); ?>
+    <?php includescripts(); ?>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+                $(this).toggleClass('active');
+            });
+        });
+    </script>
   </head>
   <body>
     <div class="wrapper">
@@ -32,18 +41,11 @@ if(!isset($_GET["no"])){
                 <span></span><span></span><span></span>
               </button>
             </nav>
-            <h1>hallo</h1>
+            <?php getModul(); ?>
           </div>
         </div>
   </body>
-  <?php includescripts(); ?>
-  <script type="text/javascript">
-      $(document).ready(function () {
-          $('#sidebarCollapse').on('click', function () {
-              $('#sidebar').toggleClass('active');
-              $(this).toggleClass('active');
-          });
-      });
-  </script>
 </html>
-<?php  } ?>
+<?php  }else{
+  getModul();
+} ?>
