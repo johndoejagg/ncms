@@ -13,4 +13,13 @@ function includescripts(){
 function db(){
   return mysqli_connect(DB[0],DB[1],DB[2],DB[3]);
 }
+
+function createSelect($data,$value,$ads=""){
+  $code="<select ".$ads.">";
+  for($i=0; $i<count($data); $i++){
+    $selected=($data[$i][1]==$value ? " selected" : "");
+    $code.="<option value='".$data[$i][1]."'".$selected.">".$data[$i][0]."</option>";
+  }
+  return $code."</select>";
+}
 ?>
