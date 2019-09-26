@@ -8,10 +8,12 @@ if(isset($_GET["check"])){
   $con=mysqli_connect(DB[0],DB[1],DB[2],DB[3]);
   $name=mysqli_real_escape_string($con,$_POST["username"]);
   $password=md5($_POST["password"]);
-  $res=mysqli_num_rows(mysqli_query($con,"SELECT * FROM `user` WHERE `name`='".$name."' AND `password`='".$password."'"));
-  if($res==1){
+  $res=mysqli_fetch_assoc(mysqli_query($con,"SELECT * FROM `user` WHERE `name`='".$name."' AND `password`='".$password."'"));
+  if($res){
     $_SESSION["ncms-user"]=$name;
     $_SESSION["ncms-password"]=$password;
+    $_SESSION["ncms-ur"]=$res["role"];
+    $_SESSION["ncms-id"]=$res["ID"];
     header("Location:".BASE."n-admin/");
   }
 }

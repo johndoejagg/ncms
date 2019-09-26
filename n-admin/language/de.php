@@ -21,6 +21,8 @@ function defineLang(){
         )
   );
 
+  $lang["errorNotAllowed"]="Aktion abgerbrochen, Ihnen fehlen die Rechte";
+
   //Settings User
   $lang["newUser"]="neuer Benutzer";
   $lang["userName"]="Benutzername";
@@ -32,6 +34,8 @@ function defineLang(){
   $lang["errorPasswordsNotMatching"]="Passwörter stimmen nicht überein.";
   $lang["errorUserNameAlreadyInUse"]="Benutzername existiert bereits, Benutzernamen müssen eindeutig sein";
   $lang["errorUserNameCantBeEmpty"]="Benutzername darf nicht leer sein";
+  $lang["errorPasswordMissing"]="Bitte Passwort wählen";
+  $lang["errorNotAllowedToCreateUser"]="Sie dürfen keinen Benutzer erstellen.";
   define("LANG",$lang);
 }
 

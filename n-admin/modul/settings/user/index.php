@@ -1,5 +1,6 @@
+<?php if($_SESSION["ncms-ur"]!=0) header("Location:".MURL."&f=edit&ID=".$_SESSION["ncms-id"]); ?>
 <h1><?php echo MODULNAME ?></h1>
-<a href="<?php echo MURL; ?>?f=edit&ID=new" class="btn bg-primary text-white mb-3"><?php echo LANG["newUser"]; ?></a>
+<a href="<?php echo MURL; ?>&f=edit&ID=new" class="btn bg-primary text-white mb-3"><?php echo LANG["newUser"]; ?></a>
 <table class="table table-striped table-sm">
   <tbody>
     <?php
