@@ -1,4 +1,6 @@
 <?php
+  if(!($_SESSION["ncms-ur"]==0 || $_SESSION["ncms-id"]==$_GET["ID"]))die(LANG["errorNotAllowed"]);
+
   if($_GET["ID"]!="new"){
     $con=db();
     $user=mysqli_fetch_assoc(mysqli_query($con,"Select ID, name, role, email FROM user WHERE ID=".mysqli_real_escape_string($con,$_GET["ID"])));
@@ -33,9 +35,7 @@
 </div>
 <input type="hidden" name="ID" id="ID" value="<?php echo $user["ID"] ?>">
 <button type="submit" class="btn bg-primary text-white mt-3 mr-3"><?php echo LANG["save"]; ?></button>
-<?php if($_SESSION["ncms-ur"]==0) {?>
 <a class="btn bg-danger text-white mt-3" href="<?php echo MURL; ?>&f=delete&ID=<?php echo $user["ID"]; ?>"><?php echo LANG["delete"]; ?></a>
-<?php } ?>
 <div class="msg bg-danger text-white p-3 mt-3" style="display:none"></div>
 </form>
 

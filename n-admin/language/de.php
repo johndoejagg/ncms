@@ -11,16 +11,17 @@ function defineLang(){
   $lang["categorys"]="Kategorien";
 
   $lang["menu"]=array(
-    array("Blog", "blog"),
-    array("Seiten", "pages"),
-    array("Medien", "media"),
-    array("Einstellungen", "settings", array(
-                                        array("Themes","themes"),
-                                        array("User","user"),
-                                        array("Bildformat","imageformat"),
-                                        array("E-mail","mail")
+    array("Blog", "blog",0,4),
+    array("Seiten", "pages",0,4),
+    array("Medien", "media",0,3),
+    array("Einstellungen", "settings",0,1, array(
+                                        array("Themes","settings/themes",0,1),
+                                        array("User","settings/user",0,1),
+                                        array("Bildformat","settings/imageformat",0,1),
+                                        array("E-mail","settings/mail",0,1)
                                       )
-        )
+        ),
+    array("User","settings/user",1,5)
   );
 
   $lang["errorNotAllowed"]="Aktion abgerbrochen, Ihnen fehlen die Rechte";

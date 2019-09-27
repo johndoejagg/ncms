@@ -2,7 +2,7 @@
   $con=db();
 
   if(isset($_GET["confirm"])){
-    if($_SESSION["ncms-ur"]==0){
+    if($_SESSION["ncms-ur"]==0 || $_SESSION["ncms-id"]==$_GET["ID"]){
       $admins=mysqli_num_rows(mysqli_query($con,"Select * FROM user WHERE role=0 AND ID!=".mysqli_real_escape_string($con,$_GET["ID"])));
       if($admins>0){
         mysqli_query($con,"DELETE FROM `user` WHERE `user`.`ID` = ".mysqli_real_escape_string($con,$_GET["ID"]));
