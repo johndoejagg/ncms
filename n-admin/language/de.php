@@ -3,12 +3,15 @@ function defineLang(){
   $lang=array();
   $lang["logout"]="ausloggen";
   $lang["save"]="speichern";
+  $lang["publish"]="veröffentlichen";
   $lang["delete"]="löschen";
   $lang["cancel"]="abbrechen";
   $lang["confirm"]="bestätigen";
   $lang["description"]="Beschreibung";
   $lang["saveDraft"]="Entwurf speichern";
   $lang["categorys"]="Kategorien";
+  $lang["errorNotAllowed"]="Aktion abgerbrochen, Ihnen fehlen die Rechte";
+
 
   $lang["menu"]=array(
     array("Blog", "blog",0,4),
@@ -24,7 +27,9 @@ function defineLang(){
     array("User","settings/user",1,5)
   );
 
-  $lang["errorNotAllowed"]="Aktion abgerbrochen, Ihnen fehlen die Rechte";
+  //blog
+  $lang["blogEntryHeadline"]="Blog Beiträge";
+  $lang["newBlogEntry"]="neuer Beitrag";
 
   //Settings User
   $lang["newUser"]="neuer Benutzer";

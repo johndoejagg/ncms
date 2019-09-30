@@ -1,0 +1,92 @@
+#content > nav{
+  display: flex;
+}
+
+#content > nav #navextend{
+  width:100%;
+  display: flex;
+}
+#content > nav #navextend #contentButtons{
+  text-align: right;
+  width: 100%;
+}
+#content > nav #navextend #contentButtons button{
+  margin: 0 10px 0 0;
+}
+.wrapper{
+  overflow-x: hidden;
+}
+
+#sidebarright {
+    max-width: 250px;
+    min-width: 250px;
+    border-left: 1px solid #bbb;
+    background: #ddd;
+    padding: 10px;
+}
+
+.rightsidebaractice #sidebarright{
+  width: auto;
+  max-width: auto;
+  min-width: auto;
+}
+.rightsidebaractice #sidebarright .content{
+  display: none;
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+@media (max-width: 1100px) {
+    #sidebar {
+        margin-left: -200px;
+        transform: rotateY(90deg);
+    }
+    #sidebar.active {
+        margin-left: 0;
+        transform: none;
+    }
+    #sidebarCollapse span:first-of-type,
+    #sidebarCollapse span:nth-of-type(2),
+    #sidebarCollapse span:last-of-type {
+        transform: none;
+        opacity: 1;
+        margin: 5px auto;
+    }
+    #sidebarCollapse.active span {
+        margin: 0 auto;
+    }
+    #sidebarCollapse.active span:first-of-type {
+        transform: rotate(45deg) translate(2px, 2px);
+    }
+    #sidebarCollapse.active span:nth-of-type(2) {
+        opacity: 0;
+    }
+    #sidebarCollapse.active span:last-of-type {
+        transform: rotate(-45deg) translate(1px, -1px);
+    }
+
+}
+@media (max-width: 768px) {
+  #sidebarright{
+    min-width: auto;
+    max-width: auto;
+  }
+  #sidebarright .content{
+    display: none;
+  }
+  .rightsidebaractice #sidebarright{
+    width: 100%;
+    max-width: 100%;
+  }
+  .rightsidebaractice #sidebarright .content{
+    display: block;
+  }
+  .rightsidebaractice #content{
+    display: none;
+  }
+  .rightsidebaractice #sidebar{
+    display: none;
+  }
+
+}
