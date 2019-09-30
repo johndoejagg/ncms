@@ -30,6 +30,7 @@ function defineLang(){
   //blog
   $lang["blogEntryHeadline"]="Blog Beiträge";
   $lang["newBlogEntry"]="neuer Beitrag";
+  $lang["enterTitle"]="Titel hier eintragen";
 
   //Settings User
   $lang["newUser"]="neuer Benutzer";
