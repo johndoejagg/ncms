@@ -9,6 +9,7 @@
       <button class="btn bg-primary text-white"><?php echo LANG["publish"]; ?></button>
     </div>
   </div>
+  <?php include "libs/content/php/template.php"; ?>
   <div id="contentbuilder"></div>
 </div>
 <div id="sidebarright">

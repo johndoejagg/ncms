@@ -46,17 +46,7 @@ var content={
       }
     },
     addElement:function(elm,i){
-      switch (elm.type) {
-        case "title":
-          $("#contentbuilder").append(h.div(h.e("textarea",elm.val,"","placeholder='"+LANG.enterTitle+"'"),"main_title"));
-          break;
-        case "headline":
-          $("#contentbuilder").append(h.elm(h.e("textarea",elm.val,"","placeholder='"+LANG.enterTitle+"'"),"headline",[["h1",""],["h2",""],["h3",""],["h4",""],["h5",""],["h6",""]]));
-          break;
-        default:
-          console.log("Sorry, we are out of " + expr + ".");
-      }
-
+      
     },
     addDialog:function(){
 
