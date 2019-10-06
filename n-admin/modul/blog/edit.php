@@ -5,11 +5,17 @@
 ?>
   <div id="navextend">
     <div id="contentButtons">
-      <button class="btn"><?php echo LANG["save"]; ?></button>
-      <button class="btn bg-primary text-white"><?php echo LANG["publish"]; ?></button>
+      <div class="left">
+        <button id="btn_add" class="btn bg-dark text-white"><i class="fas fa-plus-square"></i></button>
+      </div>
+      <div class="right">
+        <button id="btn_save" class="btn"><?php echo LANG["save"]; ?></button>
+        <button id="btn_publish" class="btn bg-primary text-white"><?php echo LANG["publish"]; ?></button>
+      </div>
     </div>
   </div>
   <?php include "libs/content/php/template.php"; ?>
+  <?php include "libs/content/php/addbuttons.php" ?>
   <div id="contentbuilder"></div>
 </div>
 <div id="sidebarright">
