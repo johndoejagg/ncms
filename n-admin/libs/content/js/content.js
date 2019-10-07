@@ -3,7 +3,6 @@ $(document).ready(function(){
   $('#toggleRightSidebar').on('click', function () {
       $('.wrapper').toggleClass('rightsidebaractice');
   });
-  $("#templates, #addDialog").hide();
   content.build(contents, title);
 });
 
@@ -27,9 +26,10 @@ var content={
       for(var i=0; i<content.contents.length; i++){
         content.builder.addElement(content.contents[i],i);
       }
-      $("textarea.title").summernote({toolbar: [
+      $("textarea.summernote").summernote({toolbar: [
         ['style', ['bold', 'italic', 'underline']],
         ['color', ['color']],
+        ['insert', ['link','table']]
       ]});
     },
     addElement:function(elm,i){

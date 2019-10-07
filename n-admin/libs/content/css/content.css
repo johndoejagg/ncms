@@ -1,3 +1,6 @@
+#templates, #addDialog{
+  display: none;
+}
 #content > nav{
   display: flex;
 }

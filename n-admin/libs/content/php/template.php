@@ -2,7 +2,7 @@
 
 
   <div class="elm title">
-    <textarea placeholder="<?php echo LANG["enterTitle"]?>">[[val]]</textarea>
+    <textarea placeholder="<?php echo LANG["enterTitle"]?>"></textarea>
   </div>
 
 
@@ -12,7 +12,7 @@
 
 
   <div class="elm text">
-    <textarea>[[text]]</textarea>
+    <textarea class="summernote">[[text]]</textarea>
   </div>
 
 

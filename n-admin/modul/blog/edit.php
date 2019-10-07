@@ -1,5 +1,5 @@
 <?php
-  echo '<script>var contents=[{type:"headline",val:"hallo",var:1}]; var title=""; var LANG='.json_encode(LANG).';</script>';
+  echo '<script>var contents=[{type:"headline",val:"hallo",var:1},{type:"text",text:"<p>hallo</p><p>du</p>"}]; var title=""; var LANG='.json_encode(LANG).';</script>';
   includestyles(array(BASE."n-admin/libs/content/css/content.css",BASE."n-admin/libs/summernote/summernote-bs4.css"));
   includescripts(array(BASE."n-admin/libs/content/js/content.js",BASE."n-admin/libs/content/js/sidebar.js",BASE."n-admin/libs/summernote/summernote-bs4.min.js"));
 ?>
