@@ -7,6 +7,7 @@ $(document).ready(function(){
 });
 
 
+
 var content={
 
   contents:[],
@@ -26,11 +27,19 @@ var content={
       for(var i=0; i<content.contents.length; i++){
         content.builder.addElement(content.contents[i],i);
       }
-      $("textarea.summernote").summernote({toolbar: [
-        ['style', ['bold', 'italic', 'underline']],
-        ['color', ['color']],
-        ['insert', ['link','table']]
-      ]});
+      $("textarea.editor").trumbowyg({
+        btns: [
+            ['viewHTML'],
+            ['formatting'],
+            ['strong', 'em'],
+            ['link'],
+            ['table'],
+            ['unorderedList', 'orderedList'],
+            ['fullscreen']
+        ],
+        removeformatPasted: true
+      });
+
     },
     addElement:function(elm,i){
       $("#contentbuilder").append(content.builder.fillElement(elm));

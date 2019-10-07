@@ -12,7 +12,7 @@
 
 
   <div class="elm text">
-    <textarea class="summernote">[[text]]</textarea>
+    <textarea class="editor">[[text]]</textarea>
   </div>
 
 

@@ -26,6 +26,15 @@
 .wrapper{
   overflow-x: hidden;
 }
+.trumbowyg-box td {
+    width: 20px;
+    height: 20px;
+    border: 1px solid;
+}
+
+.trumbowyg-box td.active {
+    background: #ccc;
+}
 
 #sidebarright {
     max-width: 250px;
