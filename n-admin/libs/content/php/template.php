@@ -1,13 +1,13 @@
 <div id="templates">
 
 
-  <div id="title">
-    <textarea placeholder="<?php echo LANG["enterTitle"]?>">[[text]]</textarea>
+  <div class="elm title">
+    <textarea placeholder="<?php echo LANG["enterTitle"]?>">[[val]]</textarea>
   </div>
 
 
   <div class="elm headline">
-    <textarea>[[text]]</textarea>
+    <textarea>[[val]]</textarea>
   </div>
 
 

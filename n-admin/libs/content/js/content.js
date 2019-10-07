@@ -3,27 +3,10 @@ $(document).ready(function(){
   $('#toggleRightSidebar').on('click', function () {
       $('.wrapper').toggleClass('rightsidebaractice');
   });
+  $("#templates, #addDialog").hide();
   content.build(contents, title);
 });
 
-var h={
-  e:function(type,content,cl="",attr=""){
-    return '<'+type+' class="'+cl+'" '+attr+'>'+content+"</"+type+">";
-  },
-  div:function(content, cl="",attr=""){
-    return h.e("div",content,cl);
-  },
-  elm:function(content,cl="",nav=[]){
-    return h.div((nav.length>0 ? h.nav(nav) : "")+h.div(content,"innner"),"_elm"+(cl!="" ? " "+cl : ""))
-  },
-  nav:function(elms){
-    var c=[];
-    for(var i=0; i<elms.length; i++){
-      c.push(h.div(elms[i][0],elms[i][1]));
-    }
-    return h.div(c.join(""),"navbar");
-  }
-}
 
 var content={
 
@@ -44,9 +27,21 @@ var content={
       for(var i=0; i<content.contents.length; i++){
         content.builder.addElement(content.contents[i],i);
       }
+      $("textarea.title").summernote({toolbar: [
+        ['style', ['bold', 'italic', 'underline']],
+        ['color', ['color']],
+      ]});
     },
     addElement:function(elm,i){
-      
+      $("#contentbuilder").append(content.builder.fillElement(elm));
+    },
+    fillElement:function(elm){
+      var html=$("#templates .elm."+elm.type).html();
+      for(var propertyName in elm) {
+        html=html.split("[["+propertyName+"]]").join(elm[propertyName]);
+        console.log(html);
+      }
+      return html;
     },
     addDialog:function(){
 

@@ -1,7 +1,7 @@
 <?php
   echo '<script>var contents=[{type:"headline",val:"hallo",var:1}]; var title=""; var LANG='.json_encode(LANG).';</script>';
-  includestyles(array(BASE."n-admin/libs/content/css/content.css"));
-  includescripts(array(BASE."n-admin/libs/content/js/content.js",BASE."n-admin/libs/content/js/sidebar.js"));
+  includestyles(array(BASE."n-admin/libs/content/css/content.css",BASE."n-admin/libs/summernote/summernote-bs4.css"));
+  includescripts(array(BASE."n-admin/libs/content/js/content.js",BASE."n-admin/libs/content/js/sidebar.js",BASE."n-admin/libs/summernote/summernote-bs4.min.js"));
 ?>
   <div id="navextend">
     <div id="contentButtons">
