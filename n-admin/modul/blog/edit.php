@@ -1,7 +1,7 @@
 <?php
   echo '<script>var contents=[{type:"headline",val:"hallo",var:1},{type:"text",text:"<p>hallo</p><p>du</p>"}]; var title=""; var LANG='.json_encode(LANG).';</script>';
-  includestyles(array(BASE."n-admin/libs/content/css/content.css",BASE."n-admin/libs/trumbowyg/ui/trumbowyg.min.css"));
-  includescripts(array(BASE."n-admin/libs/content/js/content.js",BASE."n-admin/libs/trumbowyg/trumbowyg.min.js",BASE."n-admin/libs/trumbowyg/plugins/upload/trumbowyg.cleanpaste.min.js",BASE."n-admin/libs/trumbowyg/plugins/table/trumbowyg.table.min.js"));
+  includestyles(array(BASE."n-admin/libs/content/css/content.css"));
+  includescripts(array(BASE."n-admin/libs/content/js/content.js",BASE."n-admin/libs/tinymce/tinymce.min.js"));
 ?>
   <div id="navextend">
     <div id="contentButtons">

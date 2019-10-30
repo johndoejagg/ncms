@@ -7,7 +7,7 @@
 
 
   <div class="elm headline">
-    <textarea>[[val]]</textarea>
+    <textarea class="headline"><h[[var]]>[[val]]</h[[var]]></textarea>
   </div>
 
 

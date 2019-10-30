@@ -27,18 +27,12 @@ var content={
       for(var i=0; i<content.contents.length; i++){
         content.builder.addElement(content.contents[i],i);
       }
-      $("textarea.editor").trumbowyg({
-        btns: [
-            ['viewHTML'],
-            ['formatting'],
-            ['strong', 'em'],
-            ['link'],
-            ['table'],
-            ['unorderedList', 'orderedList'],
-            ['fullscreen']
-        ],
-        removeformatPasted: true
-      });
+      tinymce.init({
+       selector: 'textarea.editor',
+       plugins:"link",
+       toolbar1: 'undo redo | bold italic | link',
+       menubar: false
+     });
 
     },
     addElement:function(elm,i){
