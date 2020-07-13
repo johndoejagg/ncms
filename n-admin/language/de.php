@@ -47,6 +47,15 @@ function defineLang(){
   $lang["errorPasswordMissing"]="Bitte Passwort wählen";
   $lang["errorNotAllowedToCreateUser"]="Sie dürfen keinen Benutzer erstellen.";
   $lang["errorCantDeleteLastAdmin"]="Sie können nicht den letzten Admin löschen.";
+
+  //Settings ImageFormat
+  $lang["newImageFormat"]="neues Bildformat";
+  $lang["width"]="Breite";
+  $lang["height"]="Höhe";
+  $lang["cropMode"]="Bildausschnitt";
+  $lang["cropModes"]=array(array("einpassen",0),array("ausschneiden",1));
+
+
   define("LANG",$lang);
 }
 

@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Erstellungszeit: 30. Okt 2019 um 14:22
--- Server-Version: 10.4.6-MariaDB
--- PHP-Version: 7.3.9
+-- Host: 127.0.0.1
+-- Erstellungszeit: 13. Jul 2020 um 21:17
+-- Server-Version: 10.4.13-MariaDB
+-- PHP-Version: 7.4.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -84,6 +83,20 @@ CREATE TABLE `content` (
   `modfied_date` timestamp NOT NULL DEFAULT current_timestamp(),
   `comments_allowed` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `imageformat`
+--
+
+CREATE TABLE `imageformat` (
+  `ID` int(11) NOT NULL,
+  `name` text NOT NULL,
+  `width` int(11) NOT NULL,
+  `height` int(11) NOT NULL,
+  `cropmode` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 

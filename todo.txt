@@ -1,4 +1,3 @@
-modul/settings/user
 modul/settings/imageformat
 modul/blog
 modul/pages
