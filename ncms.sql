@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 13. Jul 2020 um 21:17
+-- Erstellungszeit: 13. Jul 2020 um 21:51
 -- Server-Version: 10.4.13-MariaDB
 -- PHP-Version: 7.4.7
 
@@ -97,6 +97,14 @@ CREATE TABLE `imageformat` (
   `height` int(11) NOT NULL,
   `cropmode` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Daten für Tabelle `imageformat`
+--
+
+INSERT INTO `imageformat` (`ID`, `name`, `width`, `height`, `cropmode`) VALUES
+(1, 'thump', 600, 600, 0),
+(2, 'big', 2000, 2000, 0);
 
 -- --------------------------------------------------------
 
