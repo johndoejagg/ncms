@@ -1,11 +1,8 @@
-modul/settings/imageformat - save
 modul/blog
 modul/pages
 modul/settings/themes
 modul/settings/mail
 modul/comments
-modul nur einbinden wenn rechte vorhanden
-modul nur speichern wenn rechte vorhanden
 Themes
 Caching
 Speed optimierung

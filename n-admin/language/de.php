@@ -49,7 +49,6 @@ function defineLang(){
   $lang["errorCantDeleteLastAdmin"]="Sie können nicht den letzten Admin löschen.";
 
   //Settings ImageFormat
-  $lang["newImageFormat"]="neues Bildformat";
   $lang["width"]="Breite";
   $lang["height"]="Höhe";
   $lang["cropMode"]="Bildausschnitt";

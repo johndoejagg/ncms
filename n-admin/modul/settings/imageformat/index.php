@@ -1,5 +1,4 @@
 <h1><?php echo MODULNAME ?></h1>
-<a href="<?php echo MURL; ?>&f=edit&ID=new" class="btn bg-primary text-white mb-3"><?php echo LANG["newImageFormat"]; ?></a>
 <table class="table table-striped table-sm">
   <tbody>
     <?php
