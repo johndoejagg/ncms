@@ -1,10 +1,10 @@
 <?php
 
-  define("BROWSDIR","upload/".$_GET["dir"]);
+  define("BROWSDIR",$_GET["dir"]);
 
   function listDir($dir){
       echo "dir:",$dir."\n";
-      if ($handle = opendir($dir)) {
+      if ($handle = opendir("upload/".$dir)) {
 
         while (false !== ($entry = readdir($handle))) {
 
